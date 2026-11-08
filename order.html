@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="description" content="Get your treats and desserts from Lutho's Treats and Confectionaries.A backery
     based in Pietermaritzburg.">
-     <!--Meta Description- The meta description is a short summary of what the wbepage is about-->
     <meta name="Keywords" content="Cupcakes, brownies,cookies,cakes , Lemon bites ,Cinnamon, Choc Chip">
-      <!--Keywords are words or phrases related to the content of the webpage-->
     <meta name="author" content="Neliswa Shabalala">
-     <!--Website Author -This tag identifies the person or organisation responsible for creating the webpage-->
     <title> Lutho's Treats & Confectionaries</title>
     <link rel="stylesheet" href="css/order.css">
 </head>
 <body>
-<!--Header-->
+
     <header>
         <div class="header-container">
             <div class="logo-area">
@@ -23,7 +20,6 @@
                     <h1>Lutho's Treats</h1>
                 </div>
             </div>
-            <!--Navigation-->
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -37,11 +33,10 @@
     </header>
 
     <main>
-        <!--Ordering Policies-->
         <div class="card policy-card">
             <h3>Ordering & Delivery Policies</h3>
             <ol>
-                <li>Orders are strictly taken from batches of 6 except for cinnamon rolls.</li>
+                <li>Orders are strictly taken from batches of 12 except for cinnamon rolls.</li>
                 <li>Deliveries are taken from Monday to Friday, depending on the order size.</li>
                 <li>Please place your order 1-3 days prior to delivery.</li>
                 <li>For smaller orders, it depends on the amount of larger orders.</li>
@@ -50,13 +45,13 @@
 
         <div class="card order-card">
             <h2>Place Your Order</h2>
-            <form id="orderForm">
+            <form id="orderForm" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" placeholder="Enter your full name">
                     <span class="error-msg" id="nameError"></span>
                 </div>
-<!--Forms-->
+
                 <div class="form-group">
                     <label for="phone">WhatsApp / Phone Number</label>
                     <input type="tel" id="phone">
@@ -97,7 +92,7 @@
                     <label for="message">Special Requests or Allergies</label>
                     <textarea id="message" rows="4" placeholder="Please enter any special request or allergies"></textarea>
                 </div>
-<!--Buttons-->
+
                 <div class="btn-group">
                     <button type="submit" class="btn-submit">Submit Order</button>
                     <button type="reset" class="btn-reset">Clear</button>
@@ -105,13 +100,72 @@
             </form>
         </div>
     </main>
-<!--Footer-->
+
     <footer>
         <p>&copy; Lutho's Treats and Confectionaries. All rights reserved.</p>
     </footer>
 
-    <script src="javascript/order.js"></script>
-
     <div id="toast-container"></div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById('fullName');
+            const phone = document.getElementById('phone');
+            const date = document.getElementById('deliveryDate');
+            const item = document.getElementById('itemSelect');
+            const qty = document.getElementById('quantity');
+
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('dateError').textContent = '';
+            document.getElementById('itemError').textContent = '';
+            document.getElementById('qtyError').textContent = '';
+
+            if (name.value.trim() === '') {
+                document.getElementById('nameError').textContent = 'Please enter your full name.';
+                isValid = false;
+            }
+
+            if (phone.value.trim().length < 10) {
+                document.getElementById('phoneError').textContent = 'Please enter a valid 10-digit phone number.';
+                isValid = false;
+            }
+
+            if (date.value === '') {
+                document.getElementById('dateError').textContent = 'Please select a delivery date.';
+                isValid = false;
+            }
+
+            if (item.value === '') {
+                document.getElementById('itemError').textContent = 'Please select a treat from the menu.';
+                isValid = false;
+            }
+
+            if (item.value === 'cinnamon' && parseInt(qty.value) < 12) {
+                document.getElementById('qtyError').textContent = 'Cinnamon rolls require a minimum quantity of 6.';
+                isValid = false;
+            } else if (parseInt(qty.value) < 1) {
+                document.getElementById('qtyError').textContent = 'Quantity must be at least 1.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                showToast('Order submitted successfully! We will contact you soon.');
+                this.reset();
+            }
+        });
+
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = msg;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
 </body>
 </html>

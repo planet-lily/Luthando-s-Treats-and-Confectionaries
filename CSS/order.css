@@ -1,10 +1,9 @@
-*{  /*CSS Reset*/
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
- /*Body*/
 body {
     background-color: #FAF8F5;
     color: #3E2723;
@@ -14,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
- /*Header*/
+
 header {
     background-color: #3E2723;
     color: #FAF8F5;
@@ -31,7 +30,6 @@ header {
     gap: 1rem;
 }
 
- /*Logo*/
 .logo-area {
     display: flex;
     align-items: center;
@@ -43,7 +41,6 @@ header {
     border: 2px solid #E8C5C8;
 }
 
- /*Navigation*/
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -69,7 +66,6 @@ main {
     margin: 2.5rem auto;
 }
 
- /*Policy cards*/
 .card {
     background: #FFFFFF;
     border-radius: 10px;
@@ -88,7 +84,6 @@ main {
     margin-bottom: 0.4rem;
 }
 
- /*Forms*/
 .form-group {
     margin-bottom: 1.2rem;
 }
@@ -123,7 +118,7 @@ main {
     margin-top: 0.3rem;
     display: block;
 }
- /*Button*/
+
 .btn-group {
     display: flex;
     gap: 1rem;
@@ -154,7 +149,6 @@ main {
     font-weight: 600;
 }
 
- /*Error Handling*/
 #toast-container {
     position: fixed;
     bottom: 20px;
@@ -177,7 +171,7 @@ main {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
- /*Footer*/
+
 footer {
     background-color: #3E2723;
     color: #FAF8F5;
@@ -185,4 +179,3 @@ footer {
     padding: 1.5rem;
     margin-top: auto;
 }
-

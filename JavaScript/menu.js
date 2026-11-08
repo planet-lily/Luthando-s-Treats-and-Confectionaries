@@ -15,7 +15,7 @@ searchInput.addEventListener("input", () => {
     //Get the search text and covert it to lowercase
     const searchText = searchInput.value.toLowerCase().trim();
 
-    //count how many desserts match the search
+    //count how many destinaions match the search
     let matchCount = 0;
 
     //loop through every menu card
@@ -25,9 +25,9 @@ searchInput.addEventListener("input", () => {
         const title = card.querySelector("h3").textContent.toLowerCase();
 
         //Get the dessert description name
-        const description = card.querySelector(".description").textContent.toLocaleLowerCase();
+        const description = card.querySelector(".desc").textContent.toLocaleLowerCase();
 
-        //Check whether the search matches the dessert name or description
+        //Check whether the search matches the name or province
         if (title.includes(searchText) || description.includes(searchText)) {
 
             //Display matching cards

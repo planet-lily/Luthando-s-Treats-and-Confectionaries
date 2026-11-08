@@ -54,6 +54,8 @@ contactForm.addEventListener("submit", function(event) {
      }
 
      //Here , you would typically use myForm.submit() to send data to a server
+     //For this examplewe we will just show the alert and not submit
+
 
 });
 

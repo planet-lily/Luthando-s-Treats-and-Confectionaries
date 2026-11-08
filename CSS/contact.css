@@ -1,9 +1,9 @@
-* {  /*CSS Reset*/
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
- /*Body*/
+
 body {
     background-color: #FAF8F5;
     color: #3E2723;
@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
- /*Header*/
 header {
     background-color: #3E2723;
     color: #FAF8F5;
@@ -31,7 +30,6 @@ header {
     gap: 1rem;
 }
 
- /*logo*/
 .logo-area {
     display: flex;
     align-items: center;
@@ -43,7 +41,6 @@ header {
     border: 2px solid #E8C5C8;
 }
 
- /*Navigation*/
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -73,7 +70,7 @@ main h2 {
     margin-bottom: 1.5rem;
     color: #3E2723;
 }
- /*Contact*/
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,7 +97,6 @@ main h2 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
- /*Form*/
 .form-group {
     margin-bottom: 1.2rem;
 }
@@ -127,7 +123,7 @@ main h2 {
     margin-top: 0.3rem;
     display: block;
 }
- /*Button*/
+
 .btn-group {
     display: flex;
     gap: 1rem;
@@ -154,13 +150,28 @@ main h2 {
     font-weight: 600;
 }
 
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    background: #3E2723;
+    color: #FAF8F5;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-left: 4px solid #E8C5C8;
+}
 
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }
 }
- /*Footer*/
+
 footer {
     background-color: #3E2723;
     color: #FAF8F5;
@@ -173,4 +184,3 @@ footer {
 .contact-field{
     margin-top: 1.5rem;
 }
-

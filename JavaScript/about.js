@@ -18,15 +18,6 @@ accordionButtons.forEach((button) => {
         //expand or collapse the panel
         panel.classList.toggle("open");
 
-        //Span icon
-        const icon = button.querySelector(".accordion-icon");
-
-        if(panel.classList.contains("open")){
-            icon.textContent = "-";
-            button.setAttribute("aria-expanded","true");
-        }else {
-        
-        }
         //update whether the section is expanded
         button.setAttribute("aria-expanded", panel.classList.contains("open")
         );

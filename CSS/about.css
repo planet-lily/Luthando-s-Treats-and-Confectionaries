@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/*body*/
 body{
     background-color:#FAF8F5;
     color: #3e2723;
@@ -103,7 +102,6 @@ main{
     margin-bottom: 0.5rem;
 }
 
-/*Accordion*/
 .accordion{
     margin-bottom: 3rem;
 }
@@ -194,7 +192,6 @@ transition: background 0.3s ease;
     font-style: italic;
 }
 
-/*Footer*/
 footer{
     text-align: center;
     background-color:#3e2723;
@@ -258,7 +255,8 @@ h2{
 }
 
 
-/*Accordions*/
+
+
 .accordion-container {
   max-width: 800px;
   margin: 30px auto;
@@ -306,6 +304,18 @@ h2{
   color: #d63384;
 }
 
+
+
+.accordion-btn::after {
+  content: '\002B'; 
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+ .accordion-btn.active::after {
+  content: '\2212'; 
+}
 
 
 .panel {
