@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Get your treats and desserts from Lutho's Treats and Confectionaries.A backery
+    based in Pietermaritzburg.">
+     <!--Meta Description- The meta description is a short summary of what the wbepage is about-->
+    <meta name="Keywords" content="Cupcakes, brownies,cookies,cakes , Lemon bites ,Cinnamon, Choc Chip">
+    <!--Keywords are words or phrases related to the content of the webpage-->
+    <meta name="author" content="Neliswa Shabalala">
+    <!--Website Author -This tag identifies the person or organisation responsible for creating the webpage-->
+    <title> Lutho's Treats & Confectionaries</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+<!--Header-->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo.jpg" alt="Lutho's Logo" width="55" height="55">
+                <div>
+                    <h1>Lutho's Treats</h1>
+                </div>
+            </div>
+            <!--Navigation-->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">View Menu</a></li>
+                    <li><a href="order.html">Place Order and Ordering Policies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        
+        <div class="contact-grid">
+            <!--Contact  Details & Map -->
+            <div class="card details-card">
+                <h3>Contact Details</h3>
+                <p><strong>WhatsApp:</strong> 068 788 4871</p>
+                <p><strong>Location:</strong> Pietermaritzburg, KwaZulu-Natal</p>
+                <p><strong>Email:</strong> luthoshabalala@gmail.com</p>
+                <p><strong>Operating Days:</strong> Monday - Friday</p>
+
+                <!--Google Maps-->
+                <h4 class="contact-field">Find Us on the Map</h4>
+                <div class="responsive-map">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.5139273322247!2d30.346850011429396!3d-29.646857712850014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6bd31af70e01b%3A0x676303018ae12b5f!2sDurban%20University%20of%20Technology%20Indumiso%20Campus!5e0!3m2!1sen!2sza!4v1794072253586!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                 </iframe>
+                 
+
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="card form-card">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name= "fullName" placeholder="Enter your full name">
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Please enter your message"></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn-submit">Submit</button>
+                        <button type="reset" class="btn-reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Lutho's Treats and Confectionaries. All rights reserved.</p>
+    </footer>
+
+    <script src="JavaScript/contact.js"></script>
+
+   
+</body>
+</html>

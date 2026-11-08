@@ -1,0 +1,317 @@
+* {      /*CSS Reset*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Body*/
+body {
+    background-color: #FAF8F5;
+    color: #3E2723;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Header*/
+header {
+    background-color: #3E2723;
+    color: #FAF8F5;
+    padding: 1.2rem 2rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/*logo*/
+.img-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo  {
+    border-radius: 50%;
+    border: 2px solid #E8C5C8;
+}
+
+/*Navigation*/
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #FAF8F5;
+    text-decoration: none;
+    font-weight: 500;
+     transition: color 0.3s ease;
+    border-bottom: 0.3s ease;
+    padding-bottom: 0.2rem;
+}
+
+.main-nav a.active {
+    color: #E8C5C8;
+    border-bottom: 2px solid #E8C5C8;
+}
+
+.main-nav a:hover{
+   color: #E8C5C8;
+    border-bottom: 2px solid #E8C5C8;  
+}
+  
+/*Menu Section*/
+.menu-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.menu-header h2 {
+    font-size: 2.2rem;
+    color: #3E2723;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.menu-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border: 1px solid #E8C5C8;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.menu-info {
+    padding: 1.2rem;
+}
+
+.menu-info h3 {
+    font-size: 1.25rem;
+    color: #3E2723;
+    margin-bottom: 0.4rem;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #8D5B4C;
+}
+
+/*Button*/
+.call-to-action-banner {
+    text-align: center;
+    margin-top: 3rem;
+    background: #3E2723;
+    color: #FAF8F5;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.call-to-action-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-order {
+    background: #E8C5C8;
+    color: #3E2723;
+    padding: 0.7rem 1.6rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/*Footer*/
+footer {
+    background-color: #3E2723;
+    color: #FAF8F5;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+
+/*Search Section*/
+
+.search-section{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#searchInput{
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+
+    border: 2px solid#ddd;
+    border-radius: 8px;
+
+
+    /*Smooth border color change*/
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus{
+    outline:none;
+    border-color:#E8C5C8;
+}
+
+
+/*Lightbox*/
+.lightbox{
+    display: none;
+
+
+    /*Covers the entire screen*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.lightbox img{
+    max-width: 60%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/*Show the lightbox*/
+.lightbox.show{
+    display: flex;
+
+    /*Run fade in animation*/
+    animation: fadeIn 0.3s ease;
+}
+
+/*Enlarged Image*/
+#lightbox{
+    max-width: 75%;
+    max-height: 80vh;
+
+    object-fit: contain;
+    border-radius: 8px;
+
+    /*Run zoom animation*/
+    animation: zoomIn 0.3s ease;
+}
+
+/*Light box close button*/
+.close-btn{
+    position:absolute;
+    top: 20px;
+    right: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/*CSS Animations*/
+
+/*Lightbox fade-in*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/*Mobile Responsiveness*/
+
+@media(max-width:680px){
+    body{
+        font-size: 0.9rem;
+    }
+
+    header{
+        padding: 2rem 1rem;
+    }
+
+    .logo{ 
+        width: 10rem;
+    }
+
+    .main-nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    section{
+        padding: 1.2rem
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+}
+
+/*Tablet Responsiveness*/
+
+@media (max-width:900px){
+    body{
+        grid-template-columns: 1fr;
+    }
+
+
+.main-nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+}
+
