@@ -306,17 +306,6 @@ h2{
 
 
 
-.accordion-btn::after {
-  content: '\002B'; 
-  font-size: 1.3rem;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
- .accordion-btn.active::after {
-  content: '\2212'; 
-}
-
 
 .panel {
   max-height: 0;
